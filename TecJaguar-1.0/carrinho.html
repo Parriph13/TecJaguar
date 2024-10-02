@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="imagex/png" href="Jaguar.ico">
     <link rel="stylesheet" href="carrinho.css">
+    <link rel="stylesheet" href="ecommerce.css">
     <title>Carrinho</title>
 </head>
 
@@ -32,53 +34,121 @@
             </div>
         </div>
     </header>
+    <main>
+        <div class="page-title">SEU CARRINHO</div>
+        <!--Tabela de compras-->
+        <div class="content">
+            <section>
+                <table class="tabela-do-produto">
+                    <thead>
+                        <tr>
+                            <th>PRODUTO</th>
+                            <th>PREÇO</th>
+                            <th>QUANTIDADE</th>
+                            <th>TOTAL</th>
+                            <th>REMOVER</th>
+                        </tr>
+                    </thead>
+                    <tbody><!--Produtos-->
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img class="item" src="foneJBL.png" alt="">
+                                    <div class="info">
+                                        <div class="name">JBLWBUDSBLK</div>
+                                        <div class="category"> 
+                                            <p>Fone de Ouvido JBL Wave Buds,</p>
+                                            <p>Bluetooth, Resistente á Água e Poeira, Preto</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 120,00</td>
+                            <td>
+                                <div class="qty">
+                                    <button><i class="bx bx-minus"></i></button>
+                                    <span>2</span>
+                                    <button><i class="bx bx-plus"></i></button>
+                                </div>
+                            </td>
+                            <td>R$ 240,00</td>
+                            <td>
+                                <button class="remove"><i class="bx bx-x" ></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img class="item" src="carregadorPortatil.jpg" alt="">
+                                    <div class="info">
+                                        <div class="name">CARREGADOR PORTÁTIL</div>
+                                        <div class="category"> 
+                                            <p>Carregador Portátil Carregamento</p>
+                                            <p>Rápido Turbo 20000mAh</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 80,00</td>
+                            <td>
+                                <div class="qty">
+                                    <button><i class="bx bx-minus"></i></button>
+                                    <span>2</span>
+                                    <button><i class="bx bx-plus"></i></button>
+                                </div>
+                            </td>
+                            <td>R$ 160,00</td>
+                            <td>
+                                <button class="remove"><i class="bx bx-x" ></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img class="item" src="capinhadeiphone.jpg" alt="">
+                                    <div class="info">
+                                        <div class="name">PELÍCULA 3D PRIVACIDADE</div>
+                                        <div class="category"> 
+                                            <p>Película 3d Privacidade Anti Spy Para iPhone</p>
+                                            <p>(iPhone 13/13 Pro)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>R$ 27,00</td>
+                            <td>
+                                <div class="qty">
+                                    <button><i class="bx bx-minus"></i></button>
+                                    <span>1</span>
+                                    <button><i class="bx bx-plus"></i></button>
+                                </div>
+                            </td>
+                            <td>R$ 27,00</td>
+                            <td>
+                                <button class="remove"><i class="bx bx-x" ></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <aside>
+                <div class="box">
+                    <header>RESUMO DA COMPRA</header>
+                    <div class="info">
+                        <div><span>SUB-TOTAL</span><span>R$ 427,00</span></div>
+                        <div><span>FRETE</span><span>GRATIS</span></div>
+                        <div><button>Adicionar cupom de desconto<i class='bx bx-right-arrow-alt'></i></button></div>
+                    </div>
+                    <footer>
+                        <span>TOTAL</span>
+                        <span>R$ 427,00</span>
+                    </footer>
+                </div>
+                <button>FINALIZAR COMPRA</button>
+            </aside>
+        </div>
 
-    <section>
-        <h1 class="title" >ADICIONADOS AO <span>CARRINHO</span></h1>
-        <div class="card">
-            <img class="img1" src="foneJBL.png">
-            <div >
-                <h1><strong>JBL WAVE BUDS</strong></h1>
-                <h2>Preço</h2>
-                <span>R$ 150,99</span>
-                <a href="#">
-                    <h3><button><strong>FINALIZAR</strong></button></h3>
-                </a>
-                <a href="#">
-                    <h3><button class="remove"><strong>REMOVER</strong></button></h3>
-                </a>
-            </div>
-        </div>
-        <div class="card">
-            <img class="img2" src="carregador.jpg">
-            <div >
-                <h1><strong>CABO USB-C + FONTE</strong></h1>
-                <h2>Preço</h2>
-                <span>R$ 45,99</span>
-                <a href="#">
-                    <h3><button><strong>FINALIZAR</strong></button></h3>
-                </a>
-                <a href="#">
-                    <h3><button class="remove"><strong>REMOVER</strong></button></h3>
-                </a>
-            </div> 
-        </div>
-        <div class="card">
-            <img class="img3" src="SuporteCel.jpg">
-            <div >
-                <h1><strong>SUPORTE PAREDE CEL</strong></h1>
-                <h2>Preço</h2>
-                <span>R$ 55,99</span>
-                <a href="#">
-                    <h3><button><strong>FINALIZAR</strong></button></h3>
-                </a>
-                <a href="#">
-                    <h3><button class="remove"><strong>REMOVER</strong></button></h3>
-                </a>
-            </div> 
-        </div>
-    </section>
-
+    </main>
     <footer>
         <p>TecJaguar</p>
         <p>(31) 99920-3451</p>
