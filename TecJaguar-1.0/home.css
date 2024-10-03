@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Oswald:wght@700&display=swap');
+
 * {
     /*Style da páigina*/
     margin: 0;
@@ -8,70 +9,19 @@
     font-weight: 100;
     font-style: normal;
 }
-
-html {
-    background-color: #111;
-    font-family: "Oswald", sans-serif;
-}
-
-.container {
-    max-width: 1280px;
-    margin: auto;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
+/*Header da Home*/
 header {
-    z-index: 10;
-    width: 100%;
-    padding: 60px 4%;
     position: fixed;
-    top: 0;
-    left: 0;
-    text-align: center;
-    justify-items: center;
-    transition: .5s;
 }
 
 header.rolagem {
     background: #a51a1a;
     padding: 20px 4%;
 }
-
-header i .image {
-    position: absolute;
-    width: 62px;
-    height: 62px;
-    transform: translate(0%, -80%);
-}
-
-header nav {
-    transform: translate(-30%);
-    font-size: 20px;
-}
-
-header ul {
-    list-style-type: none;
-}
-
-header ul li {
-    display: inline-block;
-    padding: 6px 10px;
-    margin-left: 48px;
-}
-
 .home {
     color: #fff;
 }
 
-header ul li a {
-    color: #e2a738;
-    text-decoration: none;
-}
 
 .banner {
     height: 110vh;
@@ -81,57 +31,9 @@ header ul li a {
     background-size: cover;
 }
 
-.home-icon {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header div .image  {
-    transform: translate(-50%, -77%);
-}
-
-.flex h1 {
-    color: #f7f7f7;
-    font-size: 22px;
-    position: absolute;
-    /*transform: translate(65%, -40%);*/
-    padding: 65px;
-    transform: translate(0, -51%);
-}
-
-h1 span {
-    color: #e2a738;
-}
-
-.btn_contato button {
-    width: 100px;
-    height: 40px;
-    border: 0;
-    margin: 0;
-
-    text-align: center;
-    outline: 0;
-    padding: 0;
-
-    background-color: #e2a738;
-    color: #111;
-    cursor: pointer;
-    font-family: "Oswald", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.btn_contato button:hover {
-    color: #fff
-}
-
-nav ul li a:hover {
-    color: #fff;
-}
-
+/*Style do body*/
 .noticia {
-    z-index: 5;
+    z-index: 2;
     background-color: #e2a738;
     width: 500px;
     height: 25%;
@@ -142,7 +44,7 @@ nav ul li a:hover {
 }
 
 hr {
-    z-index: 8;
+    z-index: 3;
     transform: translate(0, 60px);
     border: #111 solid 2px;
     background-color: #111;
@@ -160,7 +62,7 @@ hr {
 }
 
 .destaque {
-    z-index: 5;
+    z-index: 2;
     background-color: #fff;
     width: 450px;
     height: 40%;
@@ -237,7 +139,7 @@ hr {
 }
 
 .nos {
-    z-index: 5;
+    z-index: 2;
     background-color: #555;
     width: 98%;
     height: auto;
@@ -261,15 +163,4 @@ hr {
     font-weight: 400;
     text-align: center;
     margin-top: 25px;
-}
-
-/*RODAPÉ*/
-footer {
-    background-color: #e2a738;
-    color: #111;
-    font-family: fantasy;
-    font-size: 13px;
-    text-align: center;
-    padding-top: 3px;
-    padding-bottom: 3px;
 }

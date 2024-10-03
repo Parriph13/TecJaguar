@@ -1,0 +1,153 @@
+/*Aqui está sendo importado os tipos de fontes do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&display=swap');
+
+* {
+    /*Style da página*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+html {
+    background-color: #111;
+    font-family: "Oswald", sans-serif;
+}
+
+body {
+    background-color: #111;
+    font-family: "Oswald", sans-serif;
+    
+    /*Style do header*/
+
+   > header {
+        z-index: 4;
+        width: 100%;
+        padding: 60px 4%;
+        top: 0;
+        left: 0;
+        text-align: center;
+        justify-items: center;
+        transition: .5s;
+
+        /*Inicio da herança*/
+        .container {
+            max-width: 1280px;
+            margin: auto;
+        }
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h1 {
+                color: #f7f7f7;
+                font-size: 22px;
+                position: absolute;
+                padding: 65px;
+                transform: translate(0, -51%);
+                span {
+                    color: #e2a738;
+                }
+            }
+            .home-icon {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+        }
+        i {
+            .image {
+                position: absolute;
+                width: 62px;
+                height: 62px;
+                /*transform: translate(0%, -70%);*/
+            }
+        }
+        nav {
+            transform: translate(-30%);
+            font-size: 20px;
+        }
+        ul {
+            list-style-type: none;
+            li {
+                display: inline-block;
+                padding: 6px 10px;
+                margin-left: 48px;
+                a {
+                    color: #e2a738;
+                    text-decoration: none;
+                }
+            }
+        }
+        div {
+            .image {
+                transform: translate(-50%, -77%);
+            }
+        }
+        /*Fim da herança*/
+    }
+    /*Style do main*/
+   > main {
+        background-color: #fff;
+
+        .page-title {
+            font-size: 30px;
+            padding: 50px 0;
+        }
+        
+        .content {
+            display: flex;
+            section {
+                flex: 1;/*Assume o máximo de largura do section*/
+            }
+            aside {
+                min-width: 250px;/*Largura do aside*/
+            }
+        }
+    }
+
+}
+
+.btn_contato button {/*Estilização do elemento "class btn_contato*/
+    width: 100px;
+    height: 40px;
+    border: 0;
+    margin: 0;
+
+    text-align: center;
+    outline: 0;
+    padding: 0;
+
+    background-color: #e2a738;
+    color: #111;
+
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btn_contato button:hover {/*Estilização do hover, o hover é um seletor que permite alterar 
+o estilo de um elemento quando o utilizador passa o mouse sobre ele*/
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/*Style do footer*/
+footer {
+    background-color: #e2a738;
+    color: #111;
+    font-family: fantasy;
+    font-size: 13px;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
