@@ -1,6 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Oswald:wght@700&display=swap');
+* {
+    /*Style da páigina*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+html {
+    height: 500vh;
+    background-color: #111;
+    font-family: "Oswald", sans-serif;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    padding: 60px 4%;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    text-align: center;
+    justify-items: center;
+    transition: .5s;
+}
+
+/*header.rolagem {
+    background: #a51a1a;
+    padding: 20px 4%;
+}*/
+
+header i .image {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    transform: translate(0%, -70%);
+}
+
+header nav {
+    transform: translate(-30%);
+    font-size: 20px;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 6px 10px;
+    margin-left: 48px;
+}
+
+header ul li a {
+    color: #e2a738;
+    text-decoration: none;
+}
+
+.prod {
+    color: #fff;
+}
+
+.home-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div .image  {
+    transform: translate(-50%, -77%);
+}
+
+.flex h1 {
+    color: #f7f7f7;
+    font-size: 22px;
+    position: absolute;
+    /*transform: translate(65%, -40%);*/
+    padding: 65px;
+    transform: translate(0, -51%);
+}
+
+h1 span {
+    color: #e2a738;
+}
+
+.btn_contato button {
+    width: 100px;
+    height: 40px;
+    border: 0;
+    margin: 0;
+    text-align: center;
+    outline: 0;
+    padding: 0;
+    background-color: #e2a738;
+    color: #111;
+    cursor: pointer;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Oswald", sans-serif;
+}
+
+header nav ul li a:hover {
+    color: #fff;
+}
+
+#prod {
+    color:#fff;
+}
+
+.produtos-nav {
+    color: #fff;
+    background-color: #222;
+    /*transform: translate(0%, 20vh);*/
+    padding: 12px;
+    font-family: Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+.produtos-nav h1 {
+    margin-bottom: 8px;
+}
+
+.produtos-nav hr {
+    width: 160px;
+    background-color: #e2a738;
+    height: 2px;
+    border: none;
+}
+
+.produtos-nav ul {
+    list-style-type: none;
+}
+
+.produtos-nav ul li {
+    display: inline-block;
+    margin: 8px 5px;
+}
+
+.produtos-nav ul li a {
+    text-decoration: none;
+}
+
 .produtos-nav ul li button {
     color: #fff;
+    background-color: #222;
     border-color: #fff;
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 2px 6px;
+    width: max-content;
+    font-weight: bold;
 }
 
 #x {
@@ -13,4 +175,71 @@
     width: max-content;
     font-weight: bold;
     font-size: 90%;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 20px auto auto auto;
+    padding: 20px 10px;
+    font-family: "Oswald", sans-serif;
+}
+
+.produtos label {
+    border: #111 solid;
+    border-radius: 5%;
+    padding: 12px;
+    background-color: #fff;
+    color: #111;
+    width: 250px;
+    height: 350px;
+    position: relative;
+}
+
+.produtos img {
+    width: 100%;
+    max-width: 225px;
+    height: 225px;
+    border-radius: 5% 5% 0 0;
+    object-fit: cover;
+}
+
+.produtos .preço {
+    font-size: 150%;
+}
+
+.produtos .add-carrinho button {
+    background-color: #fff;
+    border: 1px solid #111;
+    padding: 2px 3px;
+    border-radius: 8px;
+    right: 4px;
+    bottom: 4px;
+    position: absolute;
+    font-size: 100%;
+    font-family: 'Lucida Sans Regular';
+}
+
+.produtos .add-carrinho button span {
+    font-size: 123%;
+}
+
+.produtos .add-carrinho button:hover {
+    background-color: #e2a738;
+    color: #fff;
+}
+
+footer {
+    background-color: #e2a738;
+    color: #111;
+    font-family: fantasy;
+    font-size: 13px;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
