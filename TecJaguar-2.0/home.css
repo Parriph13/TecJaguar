@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Oswald:wght@700&display=swap');
 
 .home strong {
-    color:#fff;
+    color:#ffffff;
 }
 
 .banner {
@@ -10,12 +10,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: scroll;
 }
 
 /*Style do body*/
 .noticia {
     z-index: 2;
-    background-color: #e2a738;
+    background-color: #dd6113;
     width: 500px;
     height: 25%;
     transform: translate(8px, 65%);
@@ -37,14 +38,14 @@ hr {
 }
 
 .noticia .n2 {
-    color: #f7f7f7;
+    color: #fcfcfc;
     font-size: 57%;
     padding-top: 2px;
 }
 
 .destaque {
     z-index: 2;
-    background-color: #fff;
+    background-color: #d1a66d;
     width: 450px;
     height: 40%;
     transform: translate(8px, 50%);
@@ -52,7 +53,7 @@ hr {
 }
 
 .h-destaque {
-    background-color: #a51a1a;
+    background-color: #dd6113;
     width: 100%;
     height: 18%;
     color: #fff;
@@ -115,33 +116,90 @@ hr {
 }
 
 .produtos .add-carrinho button:hover {
-    background-color: #e2a738;
+    background-color: #dd6113;
     color: #fff;
 }
 
 .nos {
     z-index: 2;
-    background-color: #555;
     width: 98%;
     height: auto;
-    margin: 12px auto;
+    margin: auto;
     margin-bottom: 0;
     padding: 20px 15px;
-    border-radius: 2px 2px 0 0;
+    
 }
 
 .nos h2 {
     text-align: center;
-    font-size: 200%;
     color: #f7f7f7;
-    border-bottom: #f7f7f7 solid 2px;
     width: 66%;
     margin: auto;
 }
 
 .nos p {
     font-family: sans-serif;
-    font-weight: 400;
+    font-weight: 90;
     text-align: center;
-    margin-top: 25px;
+    
+    height: auto
 }
+.miss {
+    z-index: 2;
+    width: 98%; /* Define a largura (lado)específica da tela */
+    height: auto; /* Define a altura (cima/baixo) específica */
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.miss h2 {
+    width: 66%;
+    margin: 0 auto; /* Centraliza o h2 dentro da classe .miss */
+    display: inline-block; /* Permite que a largura e a margem funcionem corretamente */
+}
+
+.miss p {
+    font-family: sans-serif;
+    font-weight: 90;
+    text-align: center;
+    margin-top: 5px;
+}
+.vis {
+    z-index: 2;
+    width: 98%; /* Define a largura (lado)específica da tela */
+    height: auto; /* Define a altura (cima/baixo) específica */
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.vis h2 {
+    color: #f7f7f7;
+    width: 45%;
+    margin: 0 auto; /* Centraliza o h2 dentro da classe .miss */
+    display: inline-block; /* Permite que a largura e a margem funcionem corretamente */
+}
+
+.vis p {
+    font-family: sans-serif;
+    font-weight: 70;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Estilos para as seções */    
+.nos, .miss, .vis{
+    background-color: #ffffff;
+    border-radius: 2px 2px 0 0;
+}
+.nos h2, .miss h2, .vis h3 {
+    font-size: 1.2em; /* Reduz o tamanho da fonte dos títulos */
+    color: #000000; /* Cor do texto dos títulos */
+}
+
+.nos p, .miss p, .vis p {
+    font-size: 0.9em; /* Reduz o tamanho da fonte dos parágrafos */
+    line-height: 1.3; /* Diminui o espaçamento entre linhas */
+    color: #000000; /* Cor do texto dos parágrafos */
+    margin: 0 0 0.5em 0; /* Reduz a margem inferior para menos espaçamento entre parágrafos */
+}
+
