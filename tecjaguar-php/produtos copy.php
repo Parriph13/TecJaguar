@@ -1,3 +1,5 @@
+// esse arquivo existe só pra deixar os produtos salvos enquanto o produtos.php é editado
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
