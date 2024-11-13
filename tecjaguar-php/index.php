@@ -28,12 +28,12 @@
                     <img src="https://m.media-amazon.com/images/I/51+W7A115SL._AC_SX679_.jpg" id="philipsfone">
                     <p class="item">Fone de Ouvido Philips</p>
                     <p class="preço">R$89,26</p>
-                    <a class="add-carrinho" href="carrinho.html"><button><span>+</span> Carrinho</button></a>
+                    <a class="add-carrinho" href="carrinho.php"><button><span>+</span> Carrinho</button></a>
                 </label>
                 <label for="cabo-usbc">
                     <img src="https://m.media-amazon.com/images/I/41j7VoTN4oL._AC_SX679_.jpg" id="cabo-usbc">
                     <p class="item">Carregador Cabo USB Tipo-C</p>
-                    <a class="add-carrinho" href="carrinho.html"><button><span>+</span> Carrinho</button></a>
+                    <a class="add-carrinho" href="carrinho.php"><button><span>+</span> Carrinho</button></a>
                     <p class="preço">R$53,99</p>
                 </label>
             </div>
