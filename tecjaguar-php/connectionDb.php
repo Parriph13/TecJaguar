@@ -12,6 +12,6 @@
     if($connectionDb->connect_errno) {
         echo "FALHA AO CONECTAR COM O BANCO DE DADOS";
     } else {
-        echo "BANCO DE DADO CONECTADO COM SUCESSO";
+        echo "BANCO DE DADOS CONECTADO COM SUCESSO";
     }
 ?>
