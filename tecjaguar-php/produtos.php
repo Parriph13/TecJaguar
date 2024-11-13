@@ -31,27 +31,23 @@
             <?php 
                 include("connectionDb.php");
 
-                $consulta = "SELECT * FROM stock";
+                $consulta = "SELECT * FROM produtos";
                 $con = $connectionDb->query($consulta) or die($connectionDb->error);
             ?>
 
             <table border="1">
                 <tr>
-                    <td>ID do produto</td>
+                    <td>ID</td>
                     <td>Produto </td>
-                    <td>Preço unitário</td>
-                    <td>Quantidade</td>
-                    <td>Preço do lote</td>
-                    <td>Status do produto</td>
+                    <td>Preço</td>
+                    <td>Destaque</td>
                 </tr>
                 <?php while($dado = $con->fetch_array()) { ?>
                 <tr>
-                    <td><?php echo $dado["idproduct"]; ?></td>
-                    <td><?php echo $dado["name_product"]; ?></td>
-                    <td><?php echo $dado["price_unitary"]; ?></td>
-                    <td><?php echo $dado["quantity"]; ?></td>
-                    <td><?php echo $dado["price_box"]; ?></td>
-                    <td><?php echo $dado["status_product"]; ?></td>
+                    <td><?php echo $dado["id"]; ?></td>
+                    <td><?php echo $dado["nome"]; ?></td>
+                    <td><?php echo $dado["preco"]; ?></td>
+                    <td><?php echo $dado["destaque"]; ?></td>
                 </tr>
                 <?php } ?>
             </table>

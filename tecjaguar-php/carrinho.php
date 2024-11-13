@@ -1,4 +1,10 @@
 <?php
+
+   include("connectionDb.php");
+
+    $consulta = "SELECT * FROM stock";
+   $con = $connectionDb->query($consulta) or die($connectionDb->error);
+
 session_start();
 
 // Funções para adicionar, remover e atualizar carrinho
@@ -45,7 +51,6 @@ function calcularTotal() {
     }
     return $total;
 }
-
 
 $total = calcularTotal();
 ?>
@@ -96,22 +101,12 @@ $total = calcularTotal();
                                     <td class='price'>R$ ".number_format($detalhes['preco'], 2, ',', '.')."</td>
                                     <td>
                                         <div class='qty'>
-                                            <form method='POST' action=''>
-                                                <input type='hidden' name='acao' value='adicionar'>
-                                                <input type='hidden' name='produto' value='{$produto}'>
-                                                <input type='hidden' name='preco' value='{$detalhes['preco']}'>
-                                                <button type='submit' name='quantidade' value='-1'><i class='bx bx-minus'></i></button>
-                                            </form>
+                                            <button onclick='atualizarQuantidade(\"{$produto}\", {$detalhes['preco']}, -1)'><i class='bx bx-minus'></i></button>
                                             <span>{$detalhes['quantidade']}</span>
-                                            <form method='POST' action=''>
-                                                <input type='hidden' name='acao' value='adicionar'>
-                                                <input type='hidden' name='produto' value='{$produto}'>
-                                                <input type='hidden' name='preco' value='{$detalhes['preco']}'>
-                                                <button type='submit' name='quantidade' value='1'><i class='bx bx-plus'></i></button>
-                                            </form>
+                                            <button onclick='atualizarQuantidade(\"{$produto}\", {$detalhes['preco']}, 1)'><i class='bx bx-plus'></i></button>
                                         </div>
                                     </td>
-                                    <td class='price'>R$ ".number_format($detalhes['preco'] * $detalhes['quantidade'], 2, ',', '.')."</td>
+                                    <td class='price'>R$ ".number_format($detalhes['preco'], 2, ',', '.')."</td>
                                     <td>
                                         <form method='POST'>
                                             <input type='hidden' name='acao' value='remover'>
@@ -134,18 +129,18 @@ $total = calcularTotal();
             <div class="box">
                 <header class="resumo">RESUMO DA COMPRA</header>
                 <div class="info">
-                    <div><span>SUB-TOTAL</span><span>R$ <?php echo number_format($total, 2, ',', '.'); ?></span></div>
+                    <div><span>SUB-TOTAL</span><span>R$ <?php echo number_format($detalhes['preco'], 2, ',', '.'); ?></span></div>
                     <div><span>FRETE</span><span>GRÁTIS</span></div>
                     <div><button>Adicionar cupom de desconto<i class='bx bx-right-arrow-alt'></i></button></div>
                 </div>
                 <footer>
                     <span>TOTAL</span>
-                    <span>R$ <?php echo number_format($total, 2, ',', '.'); ?></span>
+                    <span>R$ <?php echo number_format($detalhes['preco'], 2, ',', '.'); ?></span>
                 </footer>
             </div>
-            <a class="button" href="checkout.php"><button>FINALIZAR COMPRA</button></a>
+            <button class="finalizar">FINALIZAR COMPRA</button>
         </section>
-        <!--FIM DA BOX DA COMPRA-->
+    <!--FIM DA BOX DA COMPRA-->
     </section>
     <!--FIM DA TABELA CARRINHO-->
 
@@ -155,7 +150,7 @@ $total = calcularTotal();
         function atualizarQuantidade(produto, preco, quantidade) {
             const form = document.createElement('form');
             form.method = 'POST';
-            form.action = ''; // Mantém a página atual
+            form.action = 'atualizar_carrinho.php'; // Adicionei a ação do formulário
             form.innerHTML = `
                 <input type='hidden' name='acao' value='adicionar'>
                 <input type='hidden' name='produto' value='${produto}'>

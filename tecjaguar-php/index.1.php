@@ -11,44 +11,36 @@
 <body>
     <?php 
         include_once("header.html");
-        include("connectionDb.php"); // Mova a inclusão do banco para o início
     ?>
 
     <section class="banner">
         <div id="noticiadestaque">
             <hr>
             <p class="n1">Ganhe 20% de desconto</p>
-            <p class="n2">Na compra de um carrinho com mais de 5 itens!</p>
+            <p class="n2">Na compra de um carrinho com mais de 5 items!</p>
             <hr>
         </div>
 
         <div class="destaque">
             <div class="h-destaque">Confira nossos produtos:</div>
             <div class="produtos">
-                <?php
-                    $destaque = 1;
-
-                    if (!$connectionDb) {
-                        die("Conexão falhou: " . mysqli_connect_error());
-                    }
-
-                    $consulta = "SELECT * FROM produtos WHERE destaque = $destaque";
-                    $con = $connectionDb->query($consulta) or die($connectionDb->error);
-                ?>
-
-                <?php while($dado = $con->fetch_array()) { ?>
-                <label>
-                    <img src="<?php echo $dado["image"]; ?>">
-                    <p class="item"><?php echo $dado["nome"]; ?></p>
-                    <p class="preço"><?php echo $dado["preco"]; ?></p>
-                    <form method="POST" action="carrinho.php">
-                        <input type="hidden" name="acao" value="adicionar">
-                        <input type="hidden" name="produto" value="<?php echo $dado["nome"]; ?>">
-                        <input type="hidden" name="preco" value="<?php echo $dado["preco"]; ?>">
-                        <button type="submit"><span>+</span> Carrinho</button>
-                    </form>
+                <label for="philipsfone">
+                    <img src="https://m.media-amazon.com/images/I/51+W7A115SL._AC_SX679_.jpg" id="philipsfone">
+                    <p class="item">Fone de Ouvido Philips</p>
+                    <p class="preço">R$89,26</p>
+                    <a class="add-carrinho" href="carrinho.php"><button><span>+</span> Carrinho</button></a>
                 </label>
-                <?php } ?>
+                <label for="cabo-usbc">
+                <img src="https://m.media-amazon.com/images/I/41j7VoTN4oL._AC_SX679_.jpg" id="cabo-usbc">
+                <p class="item">Carregador Cabo USB Tipo-C</p>
+                <p class="preço">R$53,99</p>
+                <form method="POST" action="carrinho.php">
+                    <input type="hidden" name="acao" value="adicionar">
+                    <input type="hidden" name="produto" value="Carregador Cabo USB Tipo-C">
+                    <input type="hidden" name="preco" value="53.99">
+                    <button type="submit"><span>+</span> Carrinho</button>
+                </form>
+                </label>
             </div>
         </div>
     </section>

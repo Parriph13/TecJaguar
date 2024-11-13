@@ -46,11 +46,16 @@
                 <p class="preço">R$42,90</p>
                 <a class="add-carrinho" href="carrinho.html"><button><i class='bx bx-cart-add'></i></button></a>
             </label>
-            <label for="crrgdr-usbc">
-                <img src="https://m.media-amazon.com/images/I/41j7VoTN4oL._AC_SX679_.jpg" id="crrgdr-usbc">
+            <label for="cabo-usbc">
+                <img src="https://m.media-amazon.com/images/I/41j7VoTN4oL._AC_SX679_.jpg" id="cabo-usbc">
                 <p class="item">Carregador Cabo USB Tipo-C</p>
-                <p class="preço">R$42,21</p>
-                <a class="add-carrinho" href="carrinho.html"><button><i class='bx bx-cart-add'></i></button></a>
+                <p class="preço">R$53,99</p>
+                <form method="POST" action="carrinho.php">
+                    <input type="hidden" name="acao" value="adicionar">
+                    <input type="hidden" name="produto" value="Carregador Cabo USB Tipo-C">
+                    <input type="hidden" name="preco" value="53.99">
+                    <button type="submit"><span>+</span> Carrinho</button>
+                </form>
             </label>
             <label for="crrgdr-prttl">
                 <img src="https://m.media-amazon.com/images/I/310xpIJLfPL._AC_.jpg" id="crrgdr-prttl">

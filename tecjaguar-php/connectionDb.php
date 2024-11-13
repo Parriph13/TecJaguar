@@ -6,12 +6,7 @@
     $dbName = 'estoque';
 
     //Variável de conexão
-    $connectionDb = new mysqli($dbHost, $dbUser, $dbPassword, $dbName);
+    $connectionDb = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
 
     //Estrutura condicional
-    if($connectionDb->connect_errno) {
-        echo "FALHA AO CONECTAR COM O BANCO DE DADOS";
-    } else {
-        echo "BANCO DE DADOS CONECTADO COM SUCESSO";
-    }
 ?>
