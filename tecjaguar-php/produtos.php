@@ -28,48 +28,33 @@
         </div>
 
         <div class="produtos">
-            <label for="opeanear">
-                <img src="https://c.media-amazon.com/images/I/71gpJ2SQfTL._AC_SX679_.jpg" id="openear">
-                <p class="item">Fone de Ouvido Bluetooth Open Ear CLip</p>
-                <p class="preço">R$449,77</p>
-                <a class="add-carrinho" href="carrinho.html"><button><i class='bx bx-cart-add'></i></button></a>
-            </label>
-            <label for="philipsfone">
-                <img src="https://m.media-amazon.com/images/I/51+W7A115SL._AC_SX679_.jpg" id="philipsfone">
-                <p class="item">Fone de Ouvido Philips</p>
-                <p class="preço">R$29,26</p>
-                <a class="add-carrinho" href="carrinho.html"><button><i class='bx bx-cart-add'></i></button></a>
-            </label>
-            <label for="supcarro">
-                <img src="https://m.media-amazon.com/images/I/51Ylol7SzUL._AC_SX679_.jpg" id="supcarro">
-                <p class="item">Suporte Veicular para Celular</p>
-                <p class="preço">R$42,90</p>
-                <a class="add-carrinho" href="carrinho.html"><button><i class='bx bx-cart-add'></i></button></a>
-            </label>
-            <label for="crrgdr-usbc">
-                <img src="https://m.media-amazon.com/images/I/41j7VoTN4oL._AC_SX679_.jpg" id="crrgdr-usbc">
-                <p class="item">Carregador Cabo USB Tipo-C</p>
-                <p class="preço">R$42,21</p>
-                <a class="add-carrinho" href="carrinho.html"><button><i class='bx bx-cart-add'></i></button></a>
-            </label>
-            <label for="crrgdr-prttl">
-                <img src="https://m.media-amazon.com/images/I/310xpIJLfPL._AC_.jpg" id="crrgdr-prttl">
-                <p class="item">Carregador Portátil Ampla Compatibilidade</p>
-                <p class="preço">R$84,70</p>
-                <a class="add-carrinho" href="carrinho.html"><button><i class='bx bx-cart-add'></i></button></a>
-            </label>
-            <label for="crrgdr-prttl-sfio">
-                <img src="https://m.media-amazon.com/images/I/41WwStl2oCL._AC_SL1000_.jpg" id="crrgdr-prttl-sfio">
-                <p class="item">Carregador Portátil Sem Fio</p>
-                <p class="preço">R$99,00</p>
-                <a class="add-carrinho" href="carrinho.html"><button><i class='bx bx-cart-add'></i></button></a>
-            </label>
-            <label for="tripeflex">
-                <img src="https://m.media-amazon.com/images/I/712ZZtsSiNS._AC_SL1500_.jpg" id="tripeflex">
-                <p class="item">Tripé Flexível para Celular</p>
-                <p class="preço">R$43,93</p>
-                <a class="add-carrinho" href="carrinho.html"><button><i class='bx bx-cart-add'></i></button></a>
-            </label>
+            <?php 
+                include("connectionDb.php");
+
+                $consulta = "SELECT * FROM stock";
+                $con = $connectionDb->query($consulta) or die($connectionDb->error);
+            ?>
+
+            <table border="1">
+                <tr>
+                    <td>ID do produto</td>
+                    <td>Produto </td>
+                    <td>Preço unitário</td>
+                    <td>Quantidade</td>
+                    <td>Preço do lote</td>
+                    <td>Status do produto</td>
+                </tr>
+                <?php while($dado = $con->fetch_array()) { ?>
+                <tr>
+                    <td><?php echo $dado["idproduct"]; ?></td>
+                    <td><?php echo $dado["name_product"]; ?></td>
+                    <td><?php echo $dado["price_unitary"]; ?></td>
+                    <td><?php echo $dado["quantity"]; ?></td>
+                    <td><?php echo $dado["price_box"]; ?></td>
+                    <td><?php echo $dado["status_product"]; ?></td>
+                </tr>
+                <?php } ?>
+            </table>
         </div>
     </section>
 
