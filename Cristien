@@ -1,0 +1,48 @@
+
+Para fazer um dos produtos da sua página home aparecer no carrinho, você pode modificar o link do botão "Carrinho" para que ele adicione o produto à sessão do carrinho ao invés de apenas redirecionar para a página do carrinho. Aqui está como você pode fazer isso:
+
+### Modificações na Página Home
+
+1. **Modifique o botão "Carrinho"** para que ele envie uma requisição POST com os dados do produto.
+
+Substitua o botão do produto na seção "produtos" da sua página home por um formulário que envia os dados do produto:
+
+```html
+<label for="philipsfone">
+    <img src="https://m.media-amazon.com/images/I/51+W7A115SL._AC_SX679_.jpg" id="philipsfone">
+    <p class="item">Fone de Ouvido Philips</p>
+    <p class="preço">R$89,26</p>
+    <form method="POST" action="carrinho.php">
+        <input type="hidden" name="acao" value="adicionar">
+        <input type="hidden" name="produto" value="Fone de Ouvido Philips">
+        <input type="hidden" name="preco" value="89.26">
+        <button type="submit"><span>+</span> Carrinho</button>
+    </form>
+</label>
+```
+
+Repita o mesmo para o outro produto:
+
+```html
+<label for="cabo-usbc">
+    <img src="https://m.media-amazon.com/images/I/41j7VoTN4oL._AC_SX679_.jpg" id="cabo-usbc">
+    <p class="item">Carregador Cabo USB Tipo-C</p>
+    <p class="preço">R$53,99</p>
+    <form method="POST" action="carrinho.php">
+        <input type="hidden" name="acao" value="adicionar">
+        <input type="hidden" name="produto" value="Carregador Cabo USB Tipo-C">
+        <input type="hidden" name="preco" value="53.99">
+        <button type="submit"><span>+</span> Carrinho</button>
+    </form>
+</label>
+```
+
+### Modificações no Carrinho
+
+As funções no seu código do carrinho já estão preparadas para lidar com a adição de produtos. Quando o formulário é enviado, o produto será adicionado à sessão do carrinho.
+
+### Resumo
+
+Com essas modificações, ao clicar no botão "Carrinho" de um produto na página home, o produto será adicionado ao carrinho e você será redirecionado para a página do carrinho, onde poderá ver o produto listado.
+
+Se precisar de mais alguma coisa ou de ajustes, é só avisar!
