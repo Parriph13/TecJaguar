@@ -54,7 +54,7 @@ $conexaoBD->close();
             <p></p>
             <button type="submit" name="entrar">ENTRAR</button>
             <p></p>
-            <a href="#" style="color: azure;">Não possuo conta</a>
+            <a href="cadastro.php" style="color: azure;">Não possuo conta</a>
         </form>
     </div>
     
