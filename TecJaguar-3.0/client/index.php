@@ -21,7 +21,7 @@ if (isset($_POST['entrar'])) {
 
     if ($result->num_rows > 0) {
         // Login bem-sucedido
-        header("Location: index.php"); // Verifique se este caminho está correto
+        header("Location: TecJaguar-3.0/upload/index.php"); // Verifique se este caminho está correto
         exit(); // Certifique-se de que o script pare de ser executado após o redirecionamento
     } else {
         // Login falhou
@@ -38,24 +38,23 @@ $conexaoBD->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="loginStyle.css">
-    <title>Login</title>
+    <title>Conta</title>
 </head>
 <body>
-    <div>
-        <h1>Login</h1>
-        <?php if ($mensagem != ""): ?>
-            <p><?php echo $mensagem; ?></p>
-        <?php endif; ?>
-        <form method="post" action="">
-            <input type="text" name="email" id="email" required>
-            <p></p>
-            <input type="password" name="senha" id="senha" required>
-            <p></p>
-            <button type="submit" name="entrar">ENTRAR</button>
-            <p></p>
-            <a href="cadastro.php" style="color: azure;">Não possuo conta</a>
-        </form>
-    </div>
+    <h1>CONTA NA TECJAGUAR</h1>
+    <?php if ($mensagem != ""): ?>
+        <p><?php echo $mensagem; ?></p>
+    <?php endif; ?>
+    <form method="post" action="">
+        <label for="email">E-mail: </label>
+        <input type="text" name="email" id="email" required>
+        <p></p>
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha" id="senha" required>
+        <p></p>
+        <button type="submit" name="entrar">ENTRAR</button>
+        <p></p>
+        <a href="cadastro.php">Não possuo conta</a>
+    </form>
 </body>
 </html>
